@@ -1,0 +1,12 @@
+D:\Visual Studio\Projects\OracleWebAPIService\DeathstarLibrary\obj\Debug\net6.0\DeathstarLibrary.csproj.AssemblyReference.cache
+D:\Visual Studio\Projects\OracleWebAPIService\DeathstarLibrary\obj\Debug\net6.0\DeathstarLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\Projects\OracleWebAPIService\DeathstarLibrary\obj\Debug\net6.0\DeathstarLibrary.AssemblyInfoInputs.cache
+D:\Visual Studio\Projects\OracleWebAPIService\DeathstarLibrary\obj\Debug\net6.0\DeathstarLibrary.AssemblyInfo.cs
+D:\Visual Studio\Projects\OracleWebAPIService\DeathstarLibrary\obj\Debug\net6.0\DeathstarLibrary.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Projects\OracleWebAPIService\DeathstarLibrary\bin\Debug\net6.0\DeathstarLibrary.deps.json
+D:\Visual Studio\Projects\OracleWebAPIService\DeathstarLibrary\bin\Debug\net6.0\DeathstarLibrary.dll
+D:\Visual Studio\Projects\OracleWebAPIService\DeathstarLibrary\bin\Debug\net6.0\DeathstarLibrary.pdb
+D:\Visual Studio\Projects\OracleWebAPIService\DeathstarLibrary\obj\Debug\net6.0\DeathstarLibrary.dll
+D:\Visual Studio\Projects\OracleWebAPIService\DeathstarLibrary\obj\Debug\net6.0\refint\DeathstarLibrary.dll
+D:\Visual Studio\Projects\OracleWebAPIService\DeathstarLibrary\obj\Debug\net6.0\DeathstarLibrary.pdb
+D:\Visual Studio\Projects\OracleWebAPIService\DeathstarLibrary\obj\Debug\net6.0\ref\DeathstarLibrary.dll

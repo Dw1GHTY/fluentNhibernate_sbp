@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "vZTZrNs0t7Fj4trySbp8q8Drp+nWsBINo24KnxVFvIc=",
+  "Source": "OracleWebAPIService",
+  "BasePath": "_content/OracleWebAPIService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

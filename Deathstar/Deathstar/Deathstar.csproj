@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3FE9E59-07B1-4AEA-A02C-3B09C678EA20}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Deathstar</RootNamespace>
+    <AssemblyName>Deathstar</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.3.2.0\lib\net461\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.3.3\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.21.10.0\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.1\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataLayer.cs" />
+    <Compile Include="DTOManager.cs" />
+    <Compile Include="DTOs.cs" />
+    <Compile Include="Entiteti\Brod.cs" />
+    <Compile Include="Entiteti\CivilnaStanica.cs" />
+    <Compile Include="Entiteti\Galaksija.cs" />
+    <Compile Include="Entiteti\Grad.cs" />
+    <Compile Include="Entiteti\Igrac.cs" />
+    <Compile Include="Entiteti\Kolonizacija.cs" />
+    <Compile Include="Entiteti\Kvadrant.cs" />
+    <Compile Include="Entiteti\Osvajanje.cs" />
+    <Compile Include="Entiteti\Planeta.cs" />
+    <Compile Include="Entiteti\PlanetaPojavaBlizina.cs" />
+    <Compile Include="Entiteti\PrirodniSatelit.cs" />
+    <Compile Include="Entiteti\Savez.cs" />
+    <Compile Include="Entiteti\SpecPojava.cs" />
+    <Compile Include="Entiteti\VojnaStanica.cs" />
+    <Compile Include="Entiteti\Zvezda.cs" />
+    <Compile Include="Entiteti\ZvezdaPlanetaBlizina.cs" />
+    <Compile Include="Forme\BrodoviIgracaAzurirajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\BrodoviIgracaAzurirajForma.Designer.cs">
+      <DependentUpon>BrodoviIgracaAzurirajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\BrodoviIgracaDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\BrodoviIgracaDodajForma.Designer.cs">
+      <DependentUpon>BrodoviIgracaDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\BrodoviIgracaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\BrodoviIgracaForma.Designer.cs">
+      <DependentUpon>BrodoviIgracaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\BrodoviPlaneteDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\BrodoviPlaneteDodajForma.Designer.cs">
+      <DependentUpon>BrodoviPlaneteDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\BrodoviPlaneteForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\BrodoviPlaneteForma.Designer.cs">
+      <DependentUpon>BrodoviPlaneteForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\BrodoviSavezaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\BrodoviSavezaForma.Designer.cs">
+      <DependentUpon>BrodoviSavezaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\CivilnaStanicaDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\CivilnaStanicaDodajForma.Designer.cs">
+      <DependentUpon>CivilnaStanicaDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\CivilneStaniceForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\CivilneStaniceForma.Designer.cs">
+      <DependentUpon>CivilneStaniceForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\GalaksijaPlaneteForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\GalaksijaPlaneteForma.Designer.cs">
+      <DependentUpon>GalaksijaPlaneteForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\GalaksijeAzurirajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\GalaksijeAzurirajForma.Designer.cs">
+      <DependentUpon>GalaksijeAzurirajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\GalaksijeDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\GalaksijeDodajForma.Designer.cs">
+      <DependentUpon>GalaksijeDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\GalaksijeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\GalaksijeForma.Designer.cs">
+      <DependentUpon>GalaksijeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\GradoviDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\GradoviDodajForma.Designer.cs">
+      <DependentUpon>GradoviDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\GradoviForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\GradoviForma.Designer.cs">
+      <DependentUpon>GradoviForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IgraciAzurirajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IgraciAzurirajForma.Designer.cs">
+      <DependentUpon>IgraciAzurirajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IgraciDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IgraciDodajForma.Designer.cs">
+      <DependentUpon>IgraciDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IgraciForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IgraciForma.Designer.cs">
+      <DependentUpon>IgraciForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KvadrantiDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KvadrantiDodajForma.Designer.cs">
+      <DependentUpon>KvadrantiDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\KvadrantiForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\KvadrantiForma.Designer.cs">
+      <DependentUpon>KvadrantiForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PlaneteAzurirajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PlaneteAzurirajForma.Designer.cs">
+      <DependentUpon>PlaneteAzurirajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PlaneteDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PlaneteDodajForma.Designer.cs">
+      <DependentUpon>PlaneteDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PlaneteForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PlaneteForma.Designer.cs">
+      <DependentUpon>PlaneteForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PrirodniSatelitiDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PrirodniSatelitiDodajForma.Designer.cs">
+      <DependentUpon>PrirodniSatelitiDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PrirodniSatelitiForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PrirodniSatelitiForma.Designer.cs">
+      <DependentUpon>PrirodniSatelitiForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ProsirenjaIgraca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ProsirenjaIgraca.Designer.cs">
+      <DependentUpon>ProsirenjaIgraca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ProsirenjaSaveza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ProsirenjaSaveza.Designer.cs">
+      <DependentUpon>ProsirenjaSaveza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ProsirenjaSavezaDodajKolonizacijeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ProsirenjaSavezaDodajKolonizacijeForma.Designer.cs">
+      <DependentUpon>ProsirenjaSavezaDodajKolonizacijeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ProsirenjaSavezaDodajOsvajanjaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ProsirenjaSavezaDodajOsvajanjaForma.Designer.cs">
+      <DependentUpon>ProsirenjaSavezaDodajOsvajanjaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ProsirenjeIgracaDodajKolonizacijeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ProsirenjeIgracaDodajKolonizacijeForma.Designer.cs">
+      <DependentUpon>ProsirenjeIgracaDodajKolonizacijeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ProsirenjeIgracaDodajOsvajanjaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ProsirenjeIgracaDodajOsvajanjaForma.Designer.cs">
+      <DependentUpon>ProsirenjeIgracaDodajOsvajanjaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\SaveziAzurirajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\SaveziAzurirajForma.Designer.cs">
+      <DependentUpon>SaveziAzurirajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\SaveziDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\SaveziDodajForma.Designer.cs">
+      <DependentUpon>SaveziDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\SaveziForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\SaveziForma.Designer.cs">
+      <DependentUpon>SaveziForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\SpecPojavaPlanetaBlizinaDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\SpecPojavaPlanetaBlizinaDodajForma.Designer.cs">
+      <DependentUpon>SpecPojavaPlanetaBlizinaDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\SpecPojavaPlanetaBlizinaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\SpecPojavaPlanetaBlizinaForma.Designer.cs">
+      <DependentUpon>SpecPojavaPlanetaBlizinaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\SpecPojaveDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\SpecPojaveDodajForma.Designer.cs">
+      <DependentUpon>SpecPojaveDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\SpecPojaveForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\SpecPojaveForma.Designer.cs">
+      <DependentUpon>SpecPojaveForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\VojnaStanicaDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\VojnaStanicaDodajForma.Designer.cs">
+      <DependentUpon>VojnaStanicaDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\VojneStaniceForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\VojneStaniceForma.Designer.cs">
+      <DependentUpon>VojneStaniceForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZvezdaPlanetaBlizinaDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZvezdaPlanetaBlizinaDodajForma.Designer.cs">
+      <DependentUpon>ZvezdaPlanetaBlizinaDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZvezdeDodajForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZvezdeDodajForma.Designer.cs">
+      <DependentUpon>ZvezdeDodajForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZvezdeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZvezdeForma.Designer.cs">
+      <DependentUpon>ZvezdeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\ZvezdePlanetaBlizinaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\ZvezdePlanetaBlizinaForma.Designer.cs">
+      <DependentUpon>ZvezdePlanetaBlizinaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlavnaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlavnaForma.Designer.cs">
+      <DependentUpon>GlavnaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapiranja\BrodMapiranja.cs" />
+    <Compile Include="Mapiranja\CivilnaStanicaMapiranja.cs" />
+    <Compile Include="Mapiranja\GalaksijaMapiranja.cs" />
+    <Compile Include="Mapiranja\GradMapiranja.cs" />
+    <Compile Include="Mapiranja\IgracMapiranja.cs" />
+    <Compile Include="Mapiranja\KolonizacijaMapiranja.cs" />
+    <Compile Include="Mapiranja\KvadrantMapiranja.cs" />
+    <Compile Include="Mapiranja\OsvajanjeMapiranja.cs" />
+    <Compile Include="Mapiranja\PlanetaMapiranja.cs" />
+    <Compile Include="Mapiranja\PlanetaPojavaBlizinaMapiranja.cs" />
+    <Compile Include="Mapiranja\PrirodniSatelitMapiranja.cs" />
+    <Compile Include="Mapiranja\SavezMapiranja.cs" />
+    <Compile Include="Mapiranja\SpecPojavaMapiranja.cs" />
+    <Compile Include="Mapiranja\VojnaStanicaMapiranja.cs" />
+    <Compile Include="Mapiranja\ZvezdaMapiranja.cs" />
+    <Compile Include="Mapiranja\ZvezdaPlanetaBlizinaMapiranja.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forme\BrodoviIgracaAzurirajForma.resx">
+      <DependentUpon>BrodoviIgracaAzurirajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\BrodoviIgracaDodajForma.resx">
+      <DependentUpon>BrodoviIgracaDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\BrodoviIgracaForma.resx">
+      <DependentUpon>BrodoviIgracaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\BrodoviPlaneteDodajForma.resx">
+      <DependentUpon>BrodoviPlaneteDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\BrodoviPlaneteForma.resx">
+      <DependentUpon>BrodoviPlaneteForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\BrodoviSavezaForma.resx">
+      <DependentUpon>BrodoviSavezaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\CivilnaStanicaDodajForma.resx">
+      <DependentUpon>CivilnaStanicaDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\CivilneStaniceForma.resx">
+      <DependentUpon>CivilneStaniceForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\GalaksijaPlaneteForma.resx">
+      <DependentUpon>GalaksijaPlaneteForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\GalaksijeAzurirajForma.resx">
+      <DependentUpon>GalaksijeAzurirajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\GalaksijeDodajForma.resx">
+      <DependentUpon>GalaksijeDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\GalaksijeForma.resx">
+      <DependentUpon>GalaksijeForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\GradoviDodajForma.resx">
+      <DependentUpon>GradoviDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\GradoviForma.resx">
+      <DependentUpon>GradoviForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IgraciAzurirajForma.resx">
+      <DependentUpon>IgraciAzurirajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IgraciDodajForma.resx">
+      <DependentUpon>IgraciDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IgraciForma.resx">
+      <DependentUpon>IgraciForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KvadrantiDodajForma.resx">
+      <DependentUpon>KvadrantiDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\KvadrantiForma.resx">
+      <DependentUpon>KvadrantiForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PlaneteAzurirajForma.resx">
+      <DependentUpon>PlaneteAzurirajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PlaneteDodajForma.resx">
+      <DependentUpon>PlaneteDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PlaneteForma.resx">
+      <DependentUpon>PlaneteForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PrirodniSatelitiDodajForma.resx">
+      <DependentUpon>PrirodniSatelitiDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PrirodniSatelitiForma.resx">
+      <DependentUpon>PrirodniSatelitiForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ProsirenjaIgraca.resx">
+      <DependentUpon>ProsirenjaIgraca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ProsirenjaSaveza.resx">
+      <DependentUpon>ProsirenjaSaveza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ProsirenjaSavezaDodajKolonizacijeForma.resx">
+      <DependentUpon>ProsirenjaSavezaDodajKolonizacijeForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ProsirenjaSavezaDodajOsvajanjaForma.resx">
+      <DependentUpon>ProsirenjaSavezaDodajOsvajanjaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ProsirenjeIgracaDodajKolonizacijeForma.resx">
+      <DependentUpon>ProsirenjeIgracaDodajKolonizacijeForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ProsirenjeIgracaDodajOsvajanjaForma.resx">
+      <DependentUpon>ProsirenjeIgracaDodajOsvajanjaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\SaveziAzurirajForma.resx">
+      <DependentUpon>SaveziAzurirajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\SaveziDodajForma.resx">
+      <DependentUpon>SaveziDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\SaveziForma.resx">
+      <DependentUpon>SaveziForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\SpecPojavaPlanetaBlizinaDodajForma.resx">
+      <DependentUpon>SpecPojavaPlanetaBlizinaDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\SpecPojavaPlanetaBlizinaForma.resx">
+      <DependentUpon>SpecPojavaPlanetaBlizinaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\SpecPojaveDodajForma.resx">
+      <DependentUpon>SpecPojaveDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\SpecPojaveForma.resx">
+      <DependentUpon>SpecPojaveForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\VojnaStanicaDodajForma.resx">
+      <DependentUpon>VojnaStanicaDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\VojneStaniceForma.resx">
+      <DependentUpon>VojneStaniceForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZvezdaPlanetaBlizinaDodajForma.resx">
+      <DependentUpon>ZvezdaPlanetaBlizinaDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZvezdeDodajForma.resx">
+      <DependentUpon>ZvezdeDodajForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZvezdeForma.resx">
+      <DependentUpon>ZvezdeForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\ZvezdePlanetaBlizinaForma.resx">
+      <DependentUpon>ZvezdePlanetaBlizinaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlavnaForma.resx">
+      <DependentUpon>GlavnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resursi\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>
